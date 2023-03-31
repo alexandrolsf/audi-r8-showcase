@@ -1,0 +1,360 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+  background-color: #161616;
+}
+
+p {
+  font-size: 20px;
+  max-width: 560px;
+  line-height: 25px;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 48px;
+}
+
+.specs h2,
+.about h2 {
+  font-size: 40px;
+  padding-left: 30px;
+  border-left: 3px #5bc7ca solid;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+section {
+  padding: 40px;
+}
+
+nav,
+.infos,
+.info,
+.specs-header,
+.specs li,
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+}
+
+.specs,
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  height: 100vh;
+  min-height: 480px;
+  background: url(../img/audi-r8.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+nav {
+  background-color: #161616;
+  font-size: 20px;
+  padding: 25px 50px;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+}
+
+.menu-btn {
+  display: flex;
+  font-size: 30px;
+}
+
+.brand {
+  font-size: 20px;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 12px;
+  text-align: center;
+}
+
+nav a {
+  color: #ffffff;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+/* Header Body */
+.header-body {
+  padding: 40px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.header-body p {
+  max-width: 400px;
+}
+
+/* About Section */
+.heading h2 {
+  margin-bottom: 16px;
+}
+
+.heading p {
+  margin-left: 48px;
+  display: inline-block;
+}
+
+.infos {
+  gap: 32px;
+}
+
+.infos,
+.heading {
+  padding: 80px 16px;
+}
+
+.info img {
+  max-width: 96px;
+  margin-right: 16px;
+}
+
+.info h3 {
+  margin-bottom: 8px;
+}
+
+.info p {
+  max-width: 240px;
+}
+
+/* Specs Section */
+.specs {
+  background: url(../img/audi-r8-v10.jpg) no-repeat center;
+  min-height: 640px;
+  position: relative;
+}
+
+.specs-header,
+.specs ul {
+  position: relative;
+  z-index: 1;
+}
+
+.specs ul {
+  width: 640px;
+  margin-top: 40px;
+}
+
+.specs li {
+  padding: 8px 0;
+  border-bottom: #808080 1px solid;
+}
+
+.specs li span:first-child {
+  color: #00ffff;
+}
+
+.specs::before {
+  content: " ";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Stats Section */
+.car-stats {
+  padding: 90px;
+}
+
+.stats {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.status > div {
+  margin-bottom: 16px;
+  position: relative;
+  min-width: 160px;
+}
+
+.stats h5 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.car {
+  padding: 64px 16px 64px 16px;
+  margin-top: 80px;
+}
+
+.circle {
+  border: 2px #cccccc solid;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  background: #161616;
+  animation: glow 4s ease-in-out infinite;
+  aspect-ratio: 3 / 1;
+}
+
+.car img {
+  width: 70%;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.circle div {
+  border: inherit;
+  border-radius: inherit;
+  background: inherit;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: inherit;
+}
+
+.circle .inner-md-circle {
+  width: 75%;
+  height: 75%;
+  top: 10%;
+  animation-delay: 3s;
+}
+
+.circle .inner-sm-circle {
+  width: 50%;
+  height: 50%;
+  top: 20%;
+  animation-delay: 6s;
+}
+
+footer {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  padding: 30px;
+  color: #ffffff;
+  background: #000000;
+}
+
+/* Circle Glow Animation */
+@keyframes glow {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 16px #5bc7ca;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .menu-btn {
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .menu-btn:hover {
+    color: #eeeeee;
+  }
+  .brand,
+  .menu-btn {
+    position: relative;
+    z-index: 1;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    background: #161616;
+    width: 100%;
+    z-index: 0;
+    height: 0;
+    overflow-y: hidden;
+    transition: 0.6s ease-in-out;
+  }
+  /* Open class for JS */
+  .menu-open {
+    height: 270px;
+    padding: 80px 0 16px 0;
+  }
+  .menu li {
+    display: block;
+    margin: 16px 0;
+  }
+  .specs ul {
+    width: 80vw;
+  }
+  .infos,
+  .info,
+  .stats {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .infos {
+    gap: 48px;
+  }
+  .info img {
+    margin: 0 0 16px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  header {
+    height: 5vh;
+    min-height: 480px;
+    background: url(../img/audi-r8.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+}
